@@ -3,6 +3,8 @@ import Navbar from "./components/navigation/Navbar";
 import "./index.css";
 import backgroundVideo from "./assets/video/software.mp4";
 import Hero from "./components/hero/Hero";
+import { Link, NavLink } from "react-router-dom";
+import HeroTwo from "./components/hero/HeroTwo";
 
 function App() {
   const videoRef = useRef(null);
@@ -46,7 +48,8 @@ function App() {
       {/* Additional content section */}
       <div className="relative z-10 bg-white">
         <div className="min-h-screen p-8">
-          <h2>Your content here</h2>
+          {/* <h2>Your content here</h2> */}
+          <HeroTwo />
         </div>
       </div>
     </div>
