@@ -4,7 +4,7 @@ import "./index.css";
 import backgroundVideo from "./assets/video/software.mp4";
 import Hero from "./components/hero/Hero";
 import { Link, NavLink } from "react-router-dom";
-import HeroTwo from "./components/hero/HeroTwo";
+import SubHero from "./components/hero/SubHero";
 
 function App() {
   const videoRef = useRef(null);
@@ -49,7 +49,7 @@ function App() {
       <div className="relative z-10 bg-white">
         <div className="min-h-screen p-8">
           {/* <h2>Your content here</h2> */}
-          <HeroTwo />
+          <SubHero />
         </div>
       </div>
     </div>
