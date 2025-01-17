@@ -17,7 +17,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const heroTwo = [
   {
-    img: <img className="" src={merckImg} alt="" />,
+    img: <img className=" w-fit  " src={merckImg} alt="" />,
     logo: merck,
     logoSide: "R&D PRODUCTIVITY",
     title: "Speeding up Merck's process from 6 months to 6 hours",
@@ -25,33 +25,33 @@ const heroTwo = [
     // divStyle: "ml-24",
   },
   {
-    img: <img src={newzipImg} alt="" />,
+    img: <img className="w-fit" src={newzipImg} alt="" />,
     logo: newzip,
     logoSide: "AI FOR REAL ESTATE",
     title: "60% more user engagement with hyper-personalization",
     sub: "AI PoC in under 6 weeks to test a hypothesis on hyper-localizing real estate content to increase customer engagement",
-    divStyle: "mt-20",
+    divStyle: "lg:mt-20",
   },
   {
     // img: <img src={ubsImg} alt="" />,
-    img: <img src={newglobeImg} alt="" />,
+    img: <img className="w-fit" src={newglobeImg} alt="" />,
     logo: ubsblack,
     logoSide: "MOBILE APP REDESIGN",
     title: "Team extension for mobile design revamp at speed",
     sub: "Seamless and consistent experience, unified payment flow, and easier in-app navigation",
-    divStyle: "-mr-16 ml-32 ",
+    divStyle: "lg:-mr-14 xl:-mr-16 lg:ml-28 xl:ml-32 ",
   },
   {
-    img: <img src={prosperoImg} alt="" />,
+    img: <img className="w-fit" src={prosperoImg} alt="" />,
     logo: prospero,
     logoSide: "MOBILE MVP",
     title: "Mobile app MVP in 5 weeks for a New York fintech",
     sub: "New vision of a financial predictions app, complete with a revamped user interface and additional features",
-    divStyle: " ml-24",
+    divStyle: " lg:ml-24",
   },
   {
     img: (
-      <video width="640" height="360" autoPlay muted loop>
+      <video className="w-fit" width="640" height="360" autoPlay muted loop>
         <source src={kellerVid} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -60,10 +60,10 @@ const heroTwo = [
     logoSide: "DESIGN SYSTEM",
     title: "Increased engineering efficiency and more consistent design",
     sub: "Improved developer experience and more efficient engineering for the world's largest real estate franchise",
-    divStyle: "mt-20",
+    divStyle: "lg:mt-20",
   },
   {
-    img: <img src={newglobeImg} alt="" />,
+    img: <img className="w-fit" src={newglobeImg} alt="" />,
     logo: newglobe,
     logoSide: "EDTECH AI",
     title: "Boosting content creation with GenAi from hours to seconds",
@@ -72,15 +72,15 @@ const heroTwo = [
 ];
 export function Cards({ item, idx }) {
   return (
-    <div className="grid grid-cols-2 gap-16 px-10 ">
+    <div className="overflow-x-scroll md:overflow-hidden flex  lg:grid lg:grid-cols-2 gap-5 lg:gap-16 px-10 scrollbar-hide">
       {heroTwo.map((item, idx) => {
         return (
           <Link
-            className={`group ${item.divStyle} hover:cursor-pointer `}
+            className={`group ${item.divStyle} hover:cursor-pointer flex-shrink-0 md:flex-shrink w-[50%] md:w-auto  min-w-[300px]`}
             key={idx}
           >
             <div className="group-hover:scale-100 relative scale-90 transition-transform ease-in-out duration-500 overflow-y-hidden mb-7">
-              <div className="relative">
+              <div className="relative  lg:w-full">
                 {item.img}
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
@@ -94,16 +94,16 @@ export function Cards({ item, idx }) {
                 <span>
                   <img src={item.logo} alt="" />
                 </span>
-                <span className="font-bold text-sm text-black/70">
+                <span className="font-bold text-[10px] lg:text-sm text-black/70">
                   {item.logoSide}
                 </span>
               </div>
-              <p className="font-bold text-2xl max-w-[80%] relative transition-all ease-in-out duration-500 group-hover:underline underline-offset-8 decoration-black/80 decoration-[2px] group">
+              <p className="font-bold text-lg  lg:text-2xl max-w-[80%] relative transition-all ease-in-out duration-500 group-hover:underline underline-offset-8 decoration-black/80 decoration-[2px] group">
                 {item.title}
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black/80 transition-all duration-500 ease-in-out group-hover:w-full"></span>
               </p>
 
-              <p className="text-xl text-black/70  ">{item.sub}</p>
+              <p className=" text-lg lg:text-xl text-black/70">{item.sub}</p>
             </div>
           </Link>
         );
